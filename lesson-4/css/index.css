@@ -24,17 +24,17 @@ header {
 	border: 5px dotted blue;
 	background: #CCF;
 	/* STEP 8c: Set the header to float: left; to restore the height to auto to contain the children */
-	
+	display: flow-root;
 	/* STEP 8d: Now set the width to 100% to push the <footer> content back down where it belongs (wow)! */
 	
 }
 header h1 {
 	/* STEP 8a: Opposing floats - float the h1 to the left */
-	
+	float:left;
 }
 header nav {
 	/* STEP 8b: Float the nav element to the right - notice how the parent element is now height: 0; just like the <main> element - what a mess! */
-	
+	float:right;
 }
 header nav ul {
 	list-style-type: none;
