@@ -1,12 +1,12 @@
 @charset "utf-8";
 
 /* STEP 1b: Change the box-model rendering default from content-box to border-box */
-html {
-	
+/* html {
+	box-sizing: border-box;
 }
-*, *:before, *:after {
-	
-}
+*, *::before, *::after {
+	box-sizing: inherit;
+} */
 
 body {
 	background: #CCC;
@@ -16,9 +16,9 @@ body {
 	border: 5px dotted red;
 	background: #FCC;
 	/* STEP 2: set width of #container to 80% of body */
-	
+	width: 80%;
 	/* STEP 3: center the entire layout with auto left and right margins */
-	
+	margin: 0 auto;
 }
 header {
 	border: 5px dotted blue;
@@ -47,37 +47,40 @@ main {
 	border: 5px dotted black;
 	background: darkgray;
 	/* STEP 7c: "Set a float to clear a float" - Set the main element to float: left; and see how it now encapsulates its children with height: auto; - this helps clear the footer properly */
+	/* Note - the flow root property is new and it addresses the "set a float to clear a float layout problem */
+	display: flow-root;
+	/* float: left; */
 	
 }
-main > nav {
+main nav {
 	border: 5px dotted green;
 	background: #CFC;
 	/* STEP 4a: set the width of the first sidebar to 20% */
-	
+	width: 20%;
 	/* STEP 4b: float the column to the left */
-	
+	float: left;
 }
 main > section {
 	border: 5px dotted darkorange;
 	background: #FC9;
 	/* STEP 5a: set the width of the main (centre) column to 60% */
-	
+	width: 60%;
 	/* STEP 5b: float the column to the left */
-	
+	float: left;
 }
-main > aside {
+main aside {
 	border: 5px dotted purple;
 	background: #C9C;
 	/* STEP 6a: set the width of the second sidebar to 20% */
-	
+	width: 20%;
 	/* STEP 6b: float the column to the left */
-	
+	float: left;
 }
 footer {
 	border: 5px dotted orange;
 	background: #FF9;
 	/* STEP 7a: clear the footer (left | right | both) */
-	
+	clear: both;
 	/* STEP 7b: Notice that the <main> element has collapsed - this is because all its children are floated - now comment out the above clear property and refresh the browser tab */
 }
 header,
@@ -86,5 +89,5 @@ main > section,
 main > aside,
 footer {
 	/* STEP 9: add some padding to the main layout containers to give the text some room to breathe - then head over to flexbox.html to see how to do this an easier way */
-	
+	padding: 2.5%;
 }
