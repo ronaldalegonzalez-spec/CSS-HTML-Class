@@ -6,6 +6,8 @@
 🔘 Secundarios: gris medio / beige apagado*/
 
 
+html{
+background-color: rgba(38, 36, 36, 0.619)}
 
 /* header colors */
 header{
@@ -17,7 +19,7 @@ header h1{
     color: white;
     font-size: 80px;
 }
-/* By don Toliver */
+/* subtitle: By don Toliver */
 header h2{
     color: rgb(159, 159, 159);
     font-size: 24px;
@@ -26,62 +28,75 @@ header h2{
 
 /* seccion de las lyricas */
 
-/* all the h3 titles */
-h3 {
-color: red;
+/* Section title: all the h3 titles */
+section h3{
+color: rgb(86, 1, 86);
 }
 
-/* chorus and Verses */
+/* parts of the song: chorus and Verses */
 main section:first-of-type h4{
-color: purple;
+color: black;
 }
 
 /* lyrics */
 main section:first-of-type p{
-color:blue;
+color:rgb(60, 59, 59);
+}
+
+/* background of all sections */
+Section{
+background-color: white;
 }
 
 /* ===================================================================== */
 
 /* all content from "About song" */
 main section:nth-of-type(2){
-    color:blueviolet;
+    color:rgb(37, 31, 31);
 }
 
 /* all content from "Album info" */
 main section:nth-of-type(3){
-    color:gray ;
+    color:rgb(37, 31, 31) ;
 }
 section p strong{
-  color:green;
+  color:rgb(86, 1, 86);
 }
 
 /* ===================================================== */
 
 /* Aside "About the Artist" */
+/* content */
 aside{
-color:brown;
-    background-color: antiquewhite;
+color:rgb(37, 31, 31) ;
+    background-color: whitesmoke;
 }
- /* titulos de career y Early Life */
+
+/* Section title: the h3 title in the aside */
+aside h3{
+    color: black;
+}
+
+ /* titles de career y Early Life */
 aside h4{
-    color:rgb(18, 56, 56) ;
+    color:darkred;
 }
 
 /* =================================================================== */
 
-/* footer */
+/* footer content*/
 footer{
-    color:rgb(18, 56, 56) ;
-    background-color:aquamarine
+    color:whitesmoke;
+    background-color:black;
 }
 /* links */
 footer a{
-    color:orange;
+    color:rgb(179, 96, 179);
 }
 
 
- /*------------------------------------------------------------------------------- */
+/*------------------------------------------------------------------------------- */
+/*------------------------------------------------------------------------------- */
 
 /* Tipografias: Títulos (h1, h2, h3):
 
@@ -98,6 +113,79 @@ Merriweather
 Ideal: serif para títulos + sans-serif para cuerpo. */
 
 
+/* NO POle Title */
+header h1{
+     font-family:Georgia, 'Times New Roman', Times, serif; 
+}
+
+/* subtitle: By don Toliver */
+header h2{
+    font-family:Georgia, 'Times New Roman', Times, serif; 
+}
+/* ============================================================ */
+
+/* seccion de las lyricas */
+
+/* Section title: all the h3 titles */
+section h3{
+    font-family:Georgia, 'Times New Roman', Times, serif; 
+    font-weight: bolder;
+}
+
+/* parts of the song: chorus and Verses */
+main section:first-of-type h4{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bolder;
+}
+
+/* lyrics */
+main section:first-of-type p{
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* ===================================================================== */
+
+/* all content from "About song" */
+main section:nth-of-type(2){
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+}
+
+/* all content from "Album information" */
+main section:nth-of-type(3){
+    font-family: Arial, Helvetica, sans-serif;
+}
+section p strong{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===================================================== */
+
+/* Aside "About the Artist" */
+/* content */
+aside p{
+     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+}
+
+/* Section title: the h3 title in the aside */
+aside h3{
+    font-family:Georgia, 'Times New Roman', Times, serif; 
+    font-weight: bolder;
+}
+ /* ttles de "career" y "Early Life" */
+aside h4{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif,Georgia, 'Times New Roman', Times, serif; 
+}
+
+/* =================================================================== */
+
+/* footer content*/
+footer p:nth-of-type(1), footer p:nth-of-type(2), footer p:nth-of-type(3){
+    font-family:'Times New Roman', Times, serif;
+}
+/* links */
+footer a{
+    font-family:'Arial Narrow', Arial, sans-serif;
+}
 
 
 
