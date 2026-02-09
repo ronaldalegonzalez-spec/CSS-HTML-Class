@@ -1,0 +1,119 @@
+ /* Colores:
+
+ 🖤 Fondo principal: negro o gris carbón
+🤍 Texto principal: blanco suave / gris claro
+❤️ Color acento: rojo vino / burdeos profundo
+🔘 Secundarios: gris medio / beige apagado*/
+
+
+
+/* header colors */
+header{
+background-color: black;
+}
+
+/* NO POle Title */
+header h1{
+    color: white;
+    font-size: 80px;
+}
+/* By don Toliver */
+header h2{
+    color: rgb(159, 159, 159);
+    font-size: 24px;
+}
+/* ============================================================ */
+
+/* seccion de las lyricas */
+
+/* all the h3 titles */
+h3 {
+color: red;
+}
+
+/* chorus and Verses */
+main section:first-of-type h4{
+color: purple;
+}
+
+/* lyrics */
+main section:first-of-type p{
+color:blue;
+}
+
+/* ===================================================================== */
+
+/* all content from "About song" */
+main section:nth-of-type(2){
+    color:blueviolet;
+}
+
+/* all content from "Album info" */
+main section:nth-of-type(3){
+    color:gray ;
+}
+section p strong{
+  color:green;
+}
+
+/* ===================================================== */
+
+/* Aside "About the Artist" */
+aside{
+color:brown;
+    background-color: antiquewhite;
+}
+ /* titulos de career y Early Life */
+aside h4{
+    color:rgb(18, 56, 56) ;
+}
+
+/* =================================================================== */
+
+/* footer */
+footer{
+    color:rgb(18, 56, 56) ;
+    background-color:aquamarine
+}
+/* links */
+footer a{
+    color:orange;
+}
+
+
+ /*------------------------------------------------------------------------------- */
+
+/* Tipografias: Títulos (h1, h2, h3):
+
+Playfair Display
+Abril Fatface
+Cormorant Garamond
+
+Cuerpo (p, lyrics):
+Open Sans
+Lato
+Roboto
+Merriweather
+
+👉 Ideal: serif para títulos + sans-serif para cuerpo. */
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------------- */
+
+/* Estilo tipográfico (sin código):
+
+h1: grande, elegante, con más espacio entre letras.
+
+h2–h4: jerarquía clara.
+
+Letras: interlineado cómodo, márgenes amplios.
+Coros: pueden verse distintos (más grandes, cursiva, centrados). */
