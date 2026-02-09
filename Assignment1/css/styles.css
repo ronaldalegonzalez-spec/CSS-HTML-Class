@@ -11,7 +11,8 @@ background-color: rgba(38, 36, 36, 0.619)}
 
 /* header colors */
 header{
-background-color: black;
+background-image: url(../img/No_Pole_background.jpg);
+background-size: cover;
 }
 
 /* NO POle Title */
