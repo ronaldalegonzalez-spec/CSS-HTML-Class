@@ -11,17 +11,29 @@
 			font: 1200%/1.2 Impact, sans-serif;
 			text-align: center;
 			/* STEP 1: Apply the gradient that you generated on the previous page as the background for the <h1> element, or use the photo of a sunset in the img/ directory */
+				background: linear-gradient(to bottom, #cb60b3 13%,#c146a1 24%,#a80077 51%,#db36a4 87%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 
 			/* STEP 2: Set the text color to transparent (dangerous) */
-
+				color: transparent;
 			/* STEP 3: Set the background-clip (and -webkit-background-clip) property to text */
 
+				/* -webkit-background-clip: text; */
+				background-clip: text;
 		}
 		h2 {
 			/* STEP 4a: Apply another non-standard visual effect -webkit-text-stroke-color (and width) */
+			color: white;
+			font: 1200%/1.2 Impact, sans-serif; /*1200%
+1200% is the font size.
+Is equivalent to 12 times the base size (usually 16px → 192px).
 
+/1.2 is the line height.
+This means the line height will be 1.2 times the font size. */
+			text-align: center;
+			font-weight: normal;
 			/* STEP 4b: Since text-stroke is center-aligned on the outline of the font, use paint-order to address this ugly default (https://css-tricks.com/text-stroke-stuck-middle/) */
-
+			-webkit-text-stroke: 40px red;
+			paint-order: stroke fill;
 		}
 		/* "Florida gulf coast" By Mmacbeth - Own work, CC0, https://commons.wikimedia.org/w/index.php?curid=39319981 */
 	</style>

@@ -11,19 +11,27 @@
 		}
 		/* STEP 1: Basic shadow with x and y offset */
 		.basic {
-			
+			text-shadow: 2px 3px black;
+			 /* x-offset | y-offset */
 		}
 		/* STEP 2: Basic shadow with offset plus color */
 		.basic-color {
-			
+			text-shadow: -2px -3px hsl(260deg 60% 50% / 0.8);
+			 /* x-offset | y-offset | color */
 		}
 		/* STEP 3: Text shadow with a blur radius */
 		.blur {
-			
+			text-shadow: 3px 2px 5px /*10px*/  gray;
+			 /* x-offset | y-offset | blur-radius | color */;
+			 /*can not add the 4 value, just three*/
 		}
 		/* STEP 4: Multiple text shadows */
 		.multiple {
-		
+		text-shadow:
+			5px 5px 2px orange,
+			-5px 0 1px lime,
+			0 5px hotpink,
+			5px 5px 3px cyan;
 		}
 	</style>
 </head>
