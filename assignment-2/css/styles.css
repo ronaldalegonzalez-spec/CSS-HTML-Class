@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/* Layout------------------------------------------------------------------------ */
+/* Layout grid and spaces------------------------------------------------------------------------ */
 main{
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -8,32 +8,45 @@ main{
         "aside1 livewell"
         "aside2 style"
         ".      health";
-    gap: 20px;
+    gap: 1px;
 }
-section h3{
+h3{
     line-height: 9px;
 
 }
 section:nth-of-type(1){
       grid-area: livewell;
-      line-height: 16px;
+      line-height: 10px;
       width: 80%;
+      margin-top:30px;
+}
+section:nth-of-type(1) p{
+    line-height: 14px;
 }
 
 section:nth-of-type(2){
-grid-area: style;
-line-height: 12px;
-margin-bottom: 10px;
-width: 80%;
+    grid-area: style;
+    line-height: 9px;
+    margin-bottom: 10px;
+    width: 80%;
+    margin-top:-95px;
+}
+section:nth-of-type(2) p{
+    line-height: 14px;
 }
 section:nth-of-type(3){
       grid-area: health;
-      line-height: 12px;
+      line-height: 9px;
       width: 80%;
+      margin-top:-128px;
+}
+section:nth-of-type(3) p{
+    line-height: 14px;
 }
 
 aside:nth-of-type(1){
       grid-area: aside1;
+      line-height: 9px;
 }
 
 aside:nth-of-type(2){
@@ -42,12 +55,13 @@ aside:nth-of-type(2){
 }
 aside:nth-of-type(2) h2{
    line-height: 1px;
+   margin-top: 30px;
 }
 
 #container{
-max-width: 1000px;
-margin: auto;
-padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
 }
 
 header{
@@ -57,30 +71,57 @@ header{
 
 header p{
     order:-1;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
 }
 figure{
     position: relative;
 }
+
+/* 31 */
 figcaption em{
     display:inline-block;
     margin-right:10px;
     position: absolute;
-    top: 299px;
-    left: 50px;
-    color: white;
+    top: 404px;
+    left: 28px;
+    font-size: 3.5rem;
 }
+/* description */
 figcaption p{
     margin:20px;
-    line-height: 1px;
-    width:100%;
+    line-height: 20px;
+    width:40%;
+    margin-top: -66px;
+    margin-left: 28px;
+    font-size:12px;
 }
 figcaption p:last-of-type{
     position:absolute;
-    left:-200px;
-    bottom: -229px;
+    left:-183px;
+    bottom: -284px;
     transform: rotate(-90deg);
     font-size:0.7rem;
     letter-spacing:2px;
+}
+
+/* Layout sizes, positions and styles====================================================== */
+
+h1{
+    margin: 0;
+    margin-top: -29px;
+    padding-bottom: 21px;
+    text-align: center;
+    margin-left:-106px;
+    font-size: 8.3rem;
+    word-spacing: 20px;
+}
+footer{
+    text-align: center;
+    margin-top: 30px;
+    margin-right: -420px;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
 }
 
 
@@ -91,12 +132,28 @@ figcaption p:last-of-type{
 
 
 /*Colors=====================================================================================*/
+figcaption em, figcaption p:first-child{
+    color: white;
+}
+h1{
+    color:rgb(245, 107, 53);
+}
+footer em{
+    color: rgb(245, 107, 53);
+}
+footer strong{
+    font-weight: 500;
+    -webkit-text-stroke: 1px black;
+}
+
 
 
 
 /*img=========================================================================================*/
 img{
-    width: 100%;
+    width: 125%;
+    margin-left:-50px;
+    margin-right:50px;
     height: auto;
     background-image: url('img/model.png');
     background-size: contain;
