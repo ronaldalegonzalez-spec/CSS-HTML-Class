@@ -73,6 +73,7 @@ header p{
     order:-1;
     font-size: 1.2rem;
     letter-spacing: 2px;
+    margin-left: 60px;
 }
 figure{
     position: relative;
