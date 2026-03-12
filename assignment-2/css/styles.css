@@ -10,45 +10,47 @@ main{
         ".      health";
     gap: 1px;
 }
+/* Adjust heading spacing for article titles */
 h3{
     line-height: 9px;
 
 }
+/* Live Well */
 section:nth-of-type(1){
       grid-area: livewell;
       line-height: 10px;
       width: 80%;
-      margin-top:30px;
+      margin-top:1px;
 }
 section:nth-of-type(1) p{
     line-height: 14px;
 }
-
+/* Style */
 section:nth-of-type(2){
     grid-area: style;
     line-height: 9px;
     margin-bottom: 10px;
     width: 80%;
-    margin-top:-95px;
+    margin-top:-275px;
 }
 section:nth-of-type(2) p{
     line-height: 14px;
 }
+/* Health */
 section:nth-of-type(3){
       grid-area: health;
       line-height: 9px;
       width: 80%;
-      margin-top:-128px;
+      margin-top:-407px;
 }
 section:nth-of-type(3) p{
     line-height: 14px;
 }
-
+/* Places the image and "On Our Cover" box in the left column */
 aside:nth-of-type(1){
       grid-area: aside1;
       line-height: 9px;
 }
-
 aside:nth-of-type(2){
    grid-area: aside2;
    width: 86%;
@@ -57,24 +59,24 @@ aside:nth-of-type(2) h2{
    line-height: 1px;
    margin-top: 30px;
 }
-
+/* Container centers the page and limits width */
 #container{
     max-width: 1000px;
     margin: auto;
     padding: 20px;
 }
-
+/* Uses flexbox to control the order of title and date in the header */
 header{
     display: flex;
     flex-direction: column;
 }
-
 header p{
     order:-1;
     font-size: 1.2rem;
     letter-spacing: 2px;
     margin-left: 60px;
 }
+/* Makes figure a positioning reference for caption elements */
 figure{
     position: relative;
 }
@@ -92,31 +94,33 @@ figcaption em{
 figcaption p{
     margin:20px;
     line-height: 20px;
-    width:40%;
-    margin-top: -66px;
+    width:50%;
+    margin-top: -92px;
     margin-left: 28px;
     font-size:12px;
 }
+/* Photographer credit rotated vertically */
 figcaption p:last-of-type{
     position:absolute;
-    left:-183px;
+    left:-163px;
     bottom: -284px;
     transform: rotate(-90deg);
     font-size:0.7rem;
     letter-spacing:2px;
 }
 
-/* Layout sizes, positions and styles====================================================== */
+/* control sizes, positions and styles====================================================== */
 
 h1{
     margin: 0;
     margin-top: -29px;
-    padding-bottom: 21px;
+    padding-bottom: 15px;
     text-align: center;
     margin-left:-106px;
     font-size: 8.3rem;
     word-spacing: 20px;
 }
+/* Footer alignment and spacing */
 footer{
     text-align: center;
     margin-top: 30px;
@@ -124,33 +128,104 @@ footer{
     font-size: 1.1rem;
     letter-spacing: 2px;
 }
+/* Make list title and description appear on the same line */
+section:nth-of-type(1) li h3, section:nth-of-type(1) li p{
+    display:inline;
+    line-height: 21px;
+}
+
+section:nth-of-type(2) li h3, section:nth-of-type(2) li p{
+    display:inline;
+    line-height: 28px;
+}
 
 
+section:nth-of-type(3) li h3, section:nth-of-type(3) li p{
+    display:inline;
+    line-height: 21px;
+}
+/* Styles the orange box around the "On Our Cover" content */
+aside:last-of-type{
+    border:2px solid rgb(255, 166, 0);
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    border-width: 2.5px;
+    padding: 10px;
+    margin-top: 30px;
+    margin-left: -6px;
+
+}
 
 /* Typografy=============================================================================== */
-
-
-
+h1{
+    font-family: "Merriweather", serif;
+}
+h2{
+    font-family:'Times New Roman', Times, serif
+}
+/* Main body font */
+body{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+/* 31 */
+figcaption em{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* TMJ */
+abbr{
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: none;
+}
 
 /*Colors=====================================================================================*/
+/* White caption text over the image */
 figcaption em, figcaption p:first-child{
     color: white;
 }
+/* Main magazine title color */
 h1{
     color:rgb(245, 107, 53);
 }
+/* Footer accent color */
 footer em{
     color: rgb(245, 107, 53);
 }
+/* Page number styling */
 footer strong{
     font-weight: 500;
     -webkit-text-stroke: 1px black;
 }
-
-
-
+/* Live Well */
+section:nth-of-type(1) h2{
+    border-top:17px solid #7ac142; 
+    padding-top: 10px;
+}
+section:nth-of-type(1) h3{
+    color: #7ac142;
+}
+/* Style */
+section:nth-of-type(2) h2{
+    border-top:17px solid #e91e63; 
+    padding-top: 10px;
+}
+section:nth-of-type(2) h3{
+    color: #e91e63;
+}
+/* Health */
+section:nth-of-type(3) h2{
+    border-top:17px solid #00bcd4; 
+    padding-top: 10px;
+}
+section:nth-of-type(3) h3{
+    color: #00bcd4;
+}
+/* Makes list numbers bold */
+li::marker{
+    font-weight: bold;
+}
 
 /*img=========================================================================================*/
+/* Color, size and position of the image on the left column */ */
 img{
     width: 125%;
     margin-left:-50px;
@@ -158,6 +233,7 @@ img{
     height: auto;
     background-image: url('img/model.png');
     background-size: contain;
+    padding-bottom: 30px;
 }
 
 
