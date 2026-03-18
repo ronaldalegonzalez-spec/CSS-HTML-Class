@@ -2,6 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 /* Box-sizing reset (https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/) */
+:root{
+	interpolate-size: allow-keywords;
+} 
+
+
 html {
 	box-sizing: border-box;
 }
@@ -17,22 +22,60 @@ html {
 	margin: 0 auto;
 }
 /* STEP 3a: Basic styling for the DETAILS element */
+details{
+	border: 5px solid grey;
+	padding: 0 1rem;
+	background-color: lightgrey;
+}
+
+/*Animate open and close of panel*/
+details div{
+	transition: height 1s ease;
+	overflow: hidden;
+}
+
+details:not([open]) div {
+	height: 0;
+}
+
+details[open] div {
+	height: auto;
+}
 
 /* STEP 3b: Adjacent sibling DETAILS elements don't need a top border */
-
+details + details{
+	border-top: none;
+}
 /* STEP 3c: Brighten up the currently open DETAILS panel (the browser adds the "open" attribute to the active element) */
-
+details[open] {
+	background-color: white;
+}
 /* STEP 4: Make the SUMMARY look a bit like a heading, and address affordance by turning the mouse cursor into a pointer to encourage user interaction */
-
+summary{
+	font-size: 1.25rem;
+	font-weight: bold;
+	padding: 1rem 0;
+	cursor: pointer;
+}
 /* STEP 5a: Disable the default triangle toggle - it is fine, but we should learn how to customize this part of the widget */
-
+summary::marker{
+	 content: none;  /*tambien se puede agregar ">" o "+", etc */
+}
 /* STEP 5b: Use the ::after pseudoelement with the SECTION to add a "+" character imploring user to "open" the panel */
-
+summary::after{
+	content: "+";
+	float: right;
+}
 /* STEP 5c: If the panel is open, then change it to a "-" character to allow user to close it again - proceed to accordion.js for the next step */
-
+details[open] summary::after{
+	content:"—" ;
+}
 /* STEP 10: Add rounded corners to the first and last DETAILS elements */
 details:first-of-type {
-	
+	border-radius: 1rem 1rem 0 0;
+}
+details:last-of-type {
+	border-radius: 0 0 1rem 1rem;
 }
 
 /* Thanks to Greg Gibson (https://css-tricks.com/two-issues-styling-the-details-element-and-how-to-solve-them/) and Chris Coyier (https://css-tricks.com/quick-reminder-that-details-summary-is-the-easiest-way-ever-to-make-an-accordion/) for some outstanding tips and tricks for styling <details> and <summary> */
