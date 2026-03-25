@@ -5,6 +5,8 @@
 		<title>Module 11 - Forms | COMP1054 Web User Interface Design</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- STEP 1: Attach the Bootstrap CSS and JS via a Content Distribution Network (CDN) (https:getbootstrap.com/) -->
+		 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+		 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 		<style>
 			body {
 				width: 80%;
@@ -15,15 +17,66 @@
 	<body>
 		<h1>Designing Forms</h1>
 		<!-- STEP 2: To leverage the Bootstrap form control styles, add the form-control class to the following input elements: text, search, email, url, tel, password, number, date (Bootstrap applies display: block and width: 100%) - adjust width of FORM element to see -->
+		<form action="" id="" method="post">
+			<div class="mb-5">
+				<lable for="name1" class="form-label">Name</lable>
+				<input type="text" id="name1" class="form-control"/>
+			</div>
+			
+			<lable for="search1" class="form-label">Search</lable>
+			<input type="search" id="search1" class="from-control" name="search1"/>
 
+			<label>Email
+				<input type="email" id="email1" class="form-control"/>
+			</label>
+
+			<input type="url" class="form-control"/>
+			<input type="tel" class="form-control"/>
+			<input type="password" class="form-control"/>
+			<input type="number" class="form-control"/>
+			<input type="date" class="form-control"/>
+
+			<input type="button" class="btn" value="Submit"/>
+			<button class="btn btn-primary btn-sm" type="Submit">Submit</button>
+
+		</form>
 		<!-- STEP 3: Add suitable labels for each of the above form inputs -->
-
+		
 		<!-- STEP 4: Surround each label and input with a sectioning element (DIV is fine in this case), observing how Bootstrap visually groups the pair with a margin-bottom -->
 
 		<!-- STEP 5: Contruct an inline form consisting of a username, password, "Remember me" checkbox, and submit button - Add a class form-inline to the FORM element  -->
-		<form>
+		<form class="">
 
-			<button type="submit" class="">Submit</button>
+			<label for="name" class="invisible">Name</label>
+			<input type="text" class="form-control" id="name" placeholder="Jane Doe"/>
+			
+			<label for ="username" class="form-label">Username</label>
+			<div class="input-group mb-3 mt-3">
+				<span class="input-group-text">username</span>
+				<input type="text" class="form-control" id="username" placeholder="username"/>
+				<span class="input-group-text">@example.com</span>
+			</div>
+
+			<div class="form-check">
+				<input type="checkbox" class="form-check-input" id="rememberme" value="rememberme">
+				<label for="rememberme"class="form-check-label">Remember me</label>
+			</div>
+			
+			<div class="form-check form-check-inline">
+				<input type="radio" class="form-check-input" name="radiogroup" id="myradio1"/>
+				<label for="myradio1" class="form-check-label">Radio button 1</label>
+			</div>
+			<div class="form-check form-check-inline">
+				<input type="radio" class="form-check-input" name="radiogroup" id="myradio2"/>
+				<label for="myradio2" class="form-check-label">Radio button 2</label>
+			</div>
+			<div class="form-check form-check-inline">
+				<input type="radio" class="form-check-input" name="radiogroup" id="myradio3"/>
+				<label for="myradio3" class="form-check-label">Radio button 3</label>
+
+			</div>
+
+			<button type="submit" class="btn btn-warning">Submit</button>
 		</form>
 		<!-- STEP 6: Style the buttons consistently across platforms with the class "btn", and if it is the primary submit button, then add another class, "btn-primary" -->
 
@@ -33,7 +86,20 @@
 		<!-- STEP 8: Add the class="custom-control-inline" to the custom-control DIV elements above to arrange the radio buttons horizontally - the default is vertically stacked -->
 
 		<!-- STEP 9: Custom styles for SELECT elements entails adding a "custom-select" class to the start tag -->
+		<select class="form-select form-select-sm mt-3 mb-3" id="" name="" disabled>
+			<option value="1">Choice 1</option>
+			<option value="2">Choice 2</option>
+			<option value="3">Choice 3</option>
+		</select>
 
+		<div class="form-check form-switch mb-3">
+			<input type="checkbox" class="form-check-input" id="toggle"/>
+			<label for="toggle" class="form-check-label">Toggle switch</label>
+		</div>
+		<div class="form-floating">
+			<input type="password" id="pw" class="form-control" placeholder="Password"/>
+			<label for="pw">Password</label>
+		</div>
 		<!-- STEP 10: Size controls by adding a class, either "form-control-lg" or "form-control-sm" -->
 			<input class="form-control " type="text" placeholder="Large">
 			<input class="form-control " type="text" placeholder="Default">
