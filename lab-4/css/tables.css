@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+html {
+    font: 120%/1.2 "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+/* edit the table layout */
+table {
+    border-collapse: collapse;
+    caption-side: top;
+    width: 98%;
+    margin-left: 20px;
+    table-layout: auto;
+}
+/* adjust the placement of the td and th without the tfooter td*/
+tbody td, th {
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666; ;
+    padding: 1em; 
+    border-right: none;
+    text-align: center;
+}
+th{
+    background: white;
+}
+/* select only the odd rows */
+tbody tr:nth-child(odd), tbody tr:nth-child(odd) th {
+    background: rgb(231, 229, 229);
+}
+
+th:nth-child(2){
+    text-align: left;
+}
+
+/*align the text in the first column of the table body to the left*/
+tbody th {
+    text-align: left;
+}
+thead tr {
+    border: none;
+}
+/* positive and negative values in the table body should be colored green and red, respectively. You can use rgba() to adjust the opacity of the colors if you like */
+.positive {
+    color: rgba(0, 128, 0, 0.8);
+}
+.negative {
+    color: rgba(255, 0, 0, 0.8);
+}
+
+/* tfooter of the table */
+tfoot td {
+    font-size: 90%;
+}
+caption {
+    font-size: 120%;
+    text-align: left;
+    padding-bottom: 1.5%;
+}
