@@ -24,7 +24,7 @@ th{
 }
 /* select only the odd rows */
 tbody tr:nth-child(odd), tbody tr:nth-child(odd) th {
-    background: rgb(231, 229, 229);
+    background: rgb(243, 241, 241);
 }
 
 th:nth-child(2){
