@@ -53,7 +53,7 @@ footer {
 }
 /* STEP 4a: Build media query breakpoint for bigger screens (2-column layout) */
 /*new syntax: @media screen and (width >= 425px)*/
-@media only screen and (min-width >= 425px) {
+@media only screen and (min-width: 425px) {
 	h1 {
 		font-size: 3rem;
 	}
