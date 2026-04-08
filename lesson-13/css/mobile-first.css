@@ -1,10 +1,10 @@
 /* STEP 3: Apply basic layout styles */
 /* Universal box-sizing with inheritance (https://css-tricks.com/box-sizing/#article-header-id-6) */
 html {
-
+	box-sizing: border-box;
 }
-*, *:before, *:after {
-
+*, *::before, *::after {
+	box-sizing: inherit;
 }
 /* STEP 5a: Remove all diagnostic colors and margins from HEADER, MAIN, and FOOTER */
 body {
@@ -52,19 +52,22 @@ footer {
 
 }
 /* STEP 4a: Build media query breakpoint for bigger screens (2-column layout) */
-@media only screen and () {
+/*new syntax: @media screen and (width >= 425px)*/
+@media only screen and (min-width >= 425px) {
 	h1 {
-
+		font-size: 3rem;
 	}
 	/* STEP 14: Size up hamburger icon a bit to match main heading */
 	#menu-icon {
 
 	}
 	main {
-
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
 	}
 	main section {
-
+		flex-basis: 50%;
 	}
 }
 /* STEP 4b: Add another media query breakpoint for even bigger screens (4-column layout) */
